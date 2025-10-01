@@ -1,0 +1,13 @@
+1(a) EAX, the accumulator
+
+1(b) 2
+
+1(c) 2a+b
+
+2.
+
+calc2(int, int):
+    mov eax, DWORD PTR [esp+4]
+    add eax, DWORD PTR [esp+8]
+    add eax, DWORD PTR [esp+8]
+    ret

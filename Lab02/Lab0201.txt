@@ -1,0 +1,21 @@
+// 1.
+
+// 1) (-42) The system outputted: "Final value of the_int: -42, Final value of the_double: 0"
+
+// 2) (35 degrees) The system outputted "Final value of the_int: 35, Final value of the_double: 0"
+
+// 3) (100,000) The system outputted "Final value of the_int: 100, Final value of the_double: 0"
+
+// 4) (876 543) The system outputted "Final value of the_int: 876, Final value of the_double: 543"
+
+// 5) (x 123.4) The system outputted "Final value of the_int: 0, Final value of the_double: 1.11111"
+
+// 6) (12.3456) The system outputted "Final value of the_int: 12, Final value of the_double: 0.3456"
+
+// 7) (.995) The system outputted "Final value of the_int: 0, Final value of the_double: 1.11111"
+
+// 8) (987654321987654321) The system outputted "Final value of the_int: 2147483647, Final value of the_double: 1.11111"
+
+
+// 2. For test number 8, the integer was maxed out by the bounds of the integer datatype. Due to this "out of bounds" error, the double was given the value of 1.11111, which appears to be a common value given to doubles after input errors.
+// In test 5, the double inputted was split into the [int] and the {int}.

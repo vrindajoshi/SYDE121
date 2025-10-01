@@ -1,0 +1,11 @@
+2(a) By changing < to <=, the program instead outputs the squares of 3 to 10, rather than the squares of 3 to 9
+
+2(b) By omitting << endl, the 7 lines of output is shown on one single line. While this is not a syntax error, this change in formatting makes the output unclear and less readable.
+
+2(c) By changing the code, the increment of each iteration of the loop changed. As a result, only the squares of 3, 5, 7, and 9 were outputted.
+
+2(d) By changing the code, there was a syntax error, as i+ does not actually increment the value of i. As a result, the for loop runs for eternity.
+
+2(e) By omitting the semi-colon, the computer does not recognize that the line has ended. As a result, there is an error in the running of the for loop.
+
+2(f) By changing the import of the package <iostream>, the computer does not recognize the function cout.
