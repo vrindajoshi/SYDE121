@@ -3,16 +3,12 @@ using namespace std;
 
 int multiplication();
 int input;
-int checkValue(int a, int b);
+void checkValue(int a, int b, int &firstTry);
 int count = 0;
-int exit();
 int firstTry = 0;
 int totalQuestions = 0;
 
 int main() {
-    // initialize input
-    // right answer counter = 0
-    // while input != -1
 
     multiplication();
 
@@ -26,7 +22,8 @@ int multiplication() {
     // generate + initialize numbers
     int a = rand()%10;
     int b = rand()%10;
-    firstTry = 1;
+
+    int firstTry = 1;
 
     // pose question
     cout << "\nHow much is " << a << " times " << b << "? (Enter -1 to end)";
@@ -39,13 +36,13 @@ int multiplication() {
         totalQuestions++;
 
         // function (input)
-        checkValue(a, b);
+        checkValue(a, b, firstTry);
     }
 
     return 0;
 }
 
-int checkValue(int a, int b) {
+void checkValue(int a, int b, int& firstTry) {
     // calculate if correct
     if (input == -1) {
         ;
@@ -60,8 +57,7 @@ int checkValue(int a, int b) {
         cout << "No. Please try again. " << endl;
         cout << "\nHow much is " << a << " times " << b << "? (Enter -1 to end)";
         cin >> input;
-        checkValue(a, b);
+        checkValue(a, b, firstTry);
     }
 
-    return 0;
 }
