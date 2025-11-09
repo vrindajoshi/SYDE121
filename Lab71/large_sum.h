@@ -1,8 +1,10 @@
 #ifndef LARGE_SUM_H
 #define LARGE_SUM_H
-//
-void enter_name(int &n1, int n2);
-int add_large_numbers(int &n1, int n2);
-void display_name(int sum);
+#include <string>
+
+void enter_nums(string &n1, string &n2);
+int add_large_numbers(string n1, string n2);
+void display_num(int sum);
+void end();
 
 #endif //LARGE_SUM_H
