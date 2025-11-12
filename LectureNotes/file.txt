@@ -1,4 +1,1 @@
-1000 10
-34567890
-456fqwythjbxuwqvxh2wbq
-ywvjhwegvhevw
+z = 3
