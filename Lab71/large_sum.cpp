@@ -9,11 +9,6 @@ void end() {
 
 void enter_nums(string &n1, string &n2) {
 
-    // duplicate strings
-    string num1 = n1;
-    string num2 = n2;
-
-
     // take in n1, check for no -1
     cin >> n1;
     if (n1 == "-1") end();
@@ -27,7 +22,14 @@ void enter_nums(string &n1, string &n2) {
         exit(1);
     }
 
+    // duplicate strings
+    string num1= n1;
+    string num2= n2;
+
     // check if character value is an integer 0-9, sentinel is not stored inside
+    // reverse the order of the string
+    int i = n1.length()-1;
+
     for (char c : n1) {
         if (!isdigit(c)) {
             if (c == '-') {
@@ -37,8 +39,6 @@ void enter_nums(string &n1, string &n2) {
             }
         }
 
-        // reverse the order of the string
-        int i = n1.length()-1;
         num1[i] = c;
         i--;
     }
@@ -66,18 +66,18 @@ void enter_nums(string &n1, string &n2) {
 int add_large_numbers(string n1, string n2) {
 
     // check which string is longer
-    string l = n1.length() > n2.length() ? n1 : n2; // larger string
+    string l = n1.length() >= n2.length() ? n1 : n2; // larger string
     string s = n1.length() < n2.length() ? n1 : n2; // smaller string
 
     int sum = 0;
 
-    for (int i = 0; i < l.length(); i++) {
+    // add together digits that are correlated
+    for (int j = 0; j < s.length(); j++) {
+         int base = ((s[j] - '0') + (l[j] - '0'));
+         sum += base*pow(10, j);
+    }
 
-        // add together digits that are correlated
-        for (i = 0; i < s.length(); i++) {
-            int base = ((s[i] - '0') + (l[i] - '0'));
-            sum += base*pow(10, i);
-        }
+    for (int i = s.length(); i < l.length(); i++) {
 
         // add the rest of the larger string's digits
         sum += (l[i] - '0')*pow(10, i);
