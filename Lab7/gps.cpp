@@ -1,5 +1,4 @@
 #include "coord.h"
-#include "coord.cpp"
 #include <iostream>
 using namespace std;
 

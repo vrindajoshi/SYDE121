@@ -15,17 +15,17 @@ void get_point(Point3D &pt) {
     // x details
     cout << "Enter x-coordinate: " << endl;
     cin >> pt.x;
-    cout << "X-coordinate is " << pt.x << endl;
+    cout << "X Coordinate is " << pt.x << endl;
 
     // y details
     cout << "Enter y-coordinate: " << endl;
     cin >> pt.y;
-    cout << "Y-coordinate is " << pt.y << endl;
+    cout << "Y Coordinate is " << pt.y << endl;
 
     // z details
     cout << "Enter z-coordinate: " << endl;
     cin >> pt.z;
-    cout << "Z-coordinate is " << pt.z << endl;
+    cout << "Z Coordinate is " << pt.z << endl;
 
     // x details
     cout << "Classify the accuracy of the the point " << endl;
@@ -35,10 +35,10 @@ void get_point(Point3D &pt) {
 
 void print_point(const Point3D &pt) {
     cout << "Point ID: " << setw(10) << pt.id << endl;
-    cout << "X-coordinate: " << setw(10) <<  pt.x << endl;
-    cout << "Y-coordinate: " << setw(10) << pt.y << endl;
-    cout << "Z-coordinate: " << setw(10) << pt.z << endl;
-    cout << "Classification: " << setw(10) << endl;
+    cout << "X Coordinate: " << setw(10) <<  pt.x << endl;
+    cout << "Y Coordinate: " << setw(10) << pt.y << endl;
+    cout << "Z Coordinate: " << setw(10) << pt.z << endl;
+    cout << "Classification: " << setw(10) << pt.order << endl;
 }
 
 double spatial_dist(const Point3D &pt1, const Point3D &pt2) {
