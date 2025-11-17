@@ -1,9 +1,10 @@
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
+#include <bits/stl_algo.h>
 using namespace std;
 
-void write(ofstream &out, string file);
+//void write(ofstream &out, string file);
 
 int main() {
     // // September 19th 2025
@@ -71,36 +72,44 @@ int main() {
     //     cout << next << endl; // the value (if true) in outputted
     // }
 
-    ofstream out_stream;
-    write(out_stream, "file.txt");
+//     ofstream out_stream;
+//     write(out_stream, "file.txt");
+//
+// }
+//
+// void write(ofstream &out, string file) {
+//
+//     // November 12th 2025
+//     int x_int = 1, y_int = 2, z_int = 3;
+//     out.open(file);
+//
+//     // unlikely to happen, but important to cover all the bases
+//     if (out.fail()) {
+//         cout << "Error opening file" << endl;
+//         exit(1);
+//     }
+//
+//     // set precision of output using .setf, .precision, etc.
+//     out << "x = " << x_int << ", y = " << y_int << endl; // the out_stream doesn't add to the pre-existing file, rather OVERwrites any pre-exisiting data
+//
+//     out.close();
+//
+//     out.open(file, ios::app); // ios::app makes the file APPEND data to a pre-exisiting file
+//     if (out.fail()) {
+//         cout << "Error opening file" << endl;
+//         exit(1);
+//     }
+//
+//     out << "z = " << z_int << endl;
+//
+//     out.close();
 
-}
+    int arrayTest[7] = {1, 4, 8, 2, 78, 2, 3};
 
-void write(ofstream &out, string file) {
+    __insertion_sort(())
 
-    // November 12th 2025
-    int x_int = 1, y_int = 2, z_int = 3;
-    out.open(file);
 
-    // unlikely to happen, but important to cover all the bases
-    if (out.fail()) {
-        cout << "Error opening file" << endl;
-        exit(1);
-    }
 
-    // set precision of output using .setf, .precision, etc.
-    out << "x = " << x_int << ", y = " << y_int << endl; // the out_stream doesn't add to the pre-existing file, rather OVERwrites any pre-exisiting data
 
-    out.close();
-
-    out.open(file, ios::app); // ios::app makes the file APPEND data to a pre-exisiting file
-    if (out.fail()) {
-        cout << "Error opening file" << endl;
-        exit(1);
-    }
-
-    out << "z = " << z_int << endl;
-
-    out.close();
 
 }
