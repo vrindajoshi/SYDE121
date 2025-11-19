@@ -1,7 +1,5 @@
-#include <fstream>
 #include <iostream>
-#include <cstdlib>
-#include <bits/stl_algo.h>
+
 using namespace std;
 
 //void write(ofstream &out, string file);
@@ -104,9 +102,67 @@ int main() {
 //
 //     out.close();
 
-    int arrayTest[7] = {1, 4, 8, 2, 78, 2, 3};
+    // NOVEMBER 17th 2025
+    // to call a constructor
+    // double length = 10.0, width = 10.0;
+    // Rectangle.rectA(); // calls the default constructor, idk whay it's showing an error
 
-    __insertion_sort(())
+    // November 19th 2025
+    /* Friend Functions can be declared in the class itself, yet have access to private data from the class declaration
+     * -> The Friend Function MUST be declared within the class file, but can be DEFINED in the cpp file
+     * -> Because of the declaration within the cpp file, the friend function has "extraordinary access" to private data
+     * -> the friend fucntion does NOT need to be called like [object name]::[function name], rather, can be called as [function_name]
+     * -> friend function must be declared with friend keyword
+     *
+     * ex. >> friend void displaySalary(Employee emp);
+     *
+     * 4 Ways to Add Objects
+     * 1. c = a.add(b) // this is a memeber function
+     *
+     * // Definintion
+     * Counter Counter::add(const Counter &b) const { // why do you have to write const, ig its just the syntax?
+     *          Counter temp;
+     *          temp.value = b.value + value; // b.value is the value of the argument, value is the valye of a
+     *          return temp; // a+b
+     * }
+     *
+     * --------------------------------------------------
+     * General Syntax of writing member functions
+     * Object Object::function(...args) const{
+     *      Object temp;
+     *      temp.value = (operation)temp;
+     *      return temp;
+     *----------------------------------------------------
+     *
+     * 2. c = add(a,b) // this is a friend function
+     *
+     * Counter add(const Counter &a, const Counter &b) {
+     *      Counter = temp;
+     *      temp.value a.value + b.value;
+     *      return temp;
+     * }
+     *
+     * 3. c = a + b // inherent use of + operator
+     *
+     * Counter operator +(const Counter &c);
+     *
+     *  Counter Counter::operator +(const Counter &c) const {
+     *      Counter temp;
+     *      temp.value = value + c.value;
+     *      return value;
+     * }
+     *
+     * 4. c = a + b // + is a friend function that has access to the private data for a and b
+     *
+     * friend Counter operator +(const Counter &a, const Counter &b);
+     *
+     * Counter +(const Counter &a, const Counter &b){
+     *      Counter temp;
+     *      temp.value = a.value + b.value;
+     *      return temp;
+     * }
+     *
+     * * /
 
 
 
