@@ -4,7 +4,7 @@ using namespace std;
 
 //void write(ofstream &out, string file);
 
-int main() {
+int main() {}
     // // September 19th 2025
     // int primaryVariable = 0;
     // int secondaryVariable = 1;
@@ -162,10 +162,12 @@ int main() {
      *      return temp;
      * }
      *
-     * * /
-
-
-
-
-
-}
+     * i) subtract function
+     *
+     * friend Counter operator -(const Counter &a, const Counter &b) {
+     *      Counter temp;
+     *      temp.value = a.value - b.value;
+     *      return temp;
+     *
+     *
+     * /
