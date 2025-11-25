@@ -4,7 +4,26 @@ using namespace std;
 
 //void write(ofstream &out, string file);
 
-int main() {}
+int main() {
+
+    // November 24th 2025
+    // Write code to fill an integer array, called input_array, with 10 numbers typed at the
+    // keyboard. Echo the numbers back to the user in reverse order and then delete the array.
+
+    typedef int* IntPtr;
+    IntPtr input_array;
+    input_array = new int[10];
+
+    for (int i = 0; i < 10; i++) {
+        cin >> input_array[i];
+    }
+
+    for (int i = 9; i >= 0; i--) {
+        cout << input_array[i] << endl;
+    }
+
+    delete[] input_array;
+}
     // // September 19th 2025
     // int primaryVariable = 0;
     // int secondaryVariable = 1;
@@ -168,6 +187,5 @@ int main() {}
      *      Counter temp;
      *      temp.value = a.value - b.value;
      *      return temp;
-     *
      *
      * /
