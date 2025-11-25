@@ -2,46 +2,23 @@
 
 int main() {
 
-  cout << "About to do a library due date computation ... " << endl;
+  cout << "About to do a flight reservation period computation ... " << endl;
   cout << "Please enter all dates in this format: year month day\n"
-       << "(three numbers separated by spaces)." << endl;
-
-  int yr = 0; // temporary storage for input from user
-  int mo = 0;
-  int day = 0;
-
-  cout << "\nOn what date was the book checked out? ";
-  cin >> yr >> mo >> day;
-  Date check_out(yr, mo, day);
-  cout << "The book was checked out on ";
-  check_out.print();
+  << "(three numbers separated by spaces)." << endl;
+  // Prompt for and read input
+  cout << "\nWhat is the date of the flight? ";
+  // User types "YYYY M D"
+  cout << "The date read was ";
+  // Echo back the input using one of the member functions of Date class
   cout << endl;
+  cout << "How many days earlier must the ticket be bought? ";
 
-  int loan_period;
-  cout << "What is the loan period, in days? ";
-  cin >> loan_period;
-  cout << "The loan period is " << loan_period << " days." << endl;
-
-  Date due_date;
-  due_date = check_out;
-  for (int count = 1; count <= loan_period; count++)
-    due_date.advance();
-  cout << "The due date is ";
-  due_date.print();
+  int n;
+  cin >> n;
+  cout << n << " day(s) advance purchase ..." << endl; // <N> comes from cin
+  cout << "You must buy the ticket on or before ";
+  // Echo back date using one of the member functions of Date class
   cout << endl;
-
-  cout << "What is the date today? ";
-  cin >> yr >> mo >> day;
-  Date today(yr, mo, day);
-  cout << "Today is ";
-  today.print();
-  cout << endl;
-  if (today.is_earlier_than(due_date))
-    cout << "The book is not due yet." << endl;
-  else if (due_date.is_earlier_than(today))
-    cout << "The book is overdue." << endl;
-  else
-    cout << "The book is due today." << endl;
 
   return 0;
 }

@@ -60,7 +60,7 @@ public:
   // Exits if invalid date encountered.
   void advance();
 
-  void backup(); // opposite of the advance functions
+  void backup();
 
   void check();
 

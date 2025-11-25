@@ -45,10 +45,7 @@ Date::Date(const int init_year, const int init_month, int const init_day)
 bool Date::is_valid() const { return is_valid_; }
 
 void Date::advance() {
-  if (!(is_valid())) {
-    cout << "Not valid. Exiting." << endl;
-    exit(1);
-  }
+  check();
 
   day_++;
   if (day_ > days_in_month(year_, month_)) {
@@ -62,26 +59,17 @@ void Date::advance() {
 }
 
 int Date::get_year() const {
-  if (!(is_valid())) {
-    cout << "Not valid. Exiting." << endl;
-    exit(1);
-  }
+  check();
   return year_;
 }
 
 int Date::get_month() const {
-  if (!(is_valid())) {
-    cout << "Not valid. Exiting." << endl;
-    exit(1);
-  }
+  check();
   return month_;
 }
 
 int Date::get_day() const {
-  if (!(is_valid())) {
-    cout << "Not valid. Exiting." << endl;
-    exit(1);
-  }
+  check();
   return day_;
 }
 
@@ -101,10 +89,7 @@ void Date::print() const {
 }
 
 bool Date::is_earlier_than(const Date &other) const {
-  if (!(is_valid())) {
-    cout << "Not valid. Exiting." << endl;
-    exit(1);
-  }
+  check();
   if (!(other.is_valid())) {
     cout << "Not valid. Exiting." << endl;
     exit(1);
@@ -120,4 +105,26 @@ bool Date::is_earlier_than(const Date &other) const {
     result = (day_ < other.day_);
 
   return result;
+}
+
+void Date::backup() {
+  check();
+
+  day_--;
+  if (day_ == 0) {
+    month_--;
+    day_ = days_in_month(year_, month_);
+    if (month_ = 0) {
+      year_--;
+      month_ = 12;
+      day_ = days_in_month(year_, month_);
+    }
+  }
+}
+
+void Date::check() {
+  if (!(is_valid())) {
+    cout << "Not valid. Exiting." << endl;
+    exit(1);
+  }
 }
