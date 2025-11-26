@@ -62,7 +62,7 @@ public:
 
   void backup();
 
-  void check();
+  void check() const;
 
 private:
   int year_;

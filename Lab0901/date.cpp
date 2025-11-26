@@ -1,6 +1,13 @@
 
 #include "date.h"
 
+void Date::check() const {
+  if (!(is_valid())) {
+    cout << "Not valid. Exiting." << endl;
+    exit(1);
+  }
+}
+
 bool is_leap(const int year) {
   return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 }
@@ -114,17 +121,10 @@ void Date::backup() {
   if (day_ == 0) {
     month_--;
     day_ = days_in_month(year_, month_);
-    if (month_ = 0) {
+    if (month_ == 0) {
       year_--;
       month_ = 12;
       day_ = days_in_month(year_, month_);
     }
-  }
-}
-
-void Date::check() {
-  if (!(is_valid())) {
-    cout << "Not valid. Exiting." << endl;
-    exit(1);
   }
 }
